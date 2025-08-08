@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage Example</title>
+  <style>
+    /* Base styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.5;
+    }
+
+    header {
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+
+    nav {
+      background: #444;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+      flex-wrap: wrap; /* helps in small screens */
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 8px 12px;
+      background: #666;
+      border-radius: 4px;
+    }
+
+    main {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .column {
+      flex: 1;
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 6px;
+    }
+
+    img {
+      max-width: 200%; /* scales images in container */
+      height: auto;
+      display: block;
+      border-radius: 6px;
+    }
+
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Media query for tablets & mobiles */
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column; /* stack vertically */
+      }
+      nav {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        width: 90%;
+        text-align: center;
+      }
+      body {
+        font-size: 16px; /* slightly smaller text */
+      }
+    }
+
+    /* Extra small screens (mobile portrait) */
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Responsive Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <main>
+    <div class="column">
+      <h2>Column 1</h2>
+      <p>This is some text in the first column. Resize your browser window to see the layout adjust for different screen sizes.</p>
+      <img src="OIP (1).jfif" alt="Sample Image">
+    </div>
+    <div class="column">
+      <h2>Column 2</h2>
+      <p>This is some text in the second column. On smaller devices, the columns will stack vertically for better readability.</p>
+      <img src="OIP.jfif" alt="Sample Image">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 My Website</p>
+  </footer>
+
+</body>
+</html>
